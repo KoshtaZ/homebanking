@@ -1,12 +1,15 @@
 package model;
 
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Client {
+
     private Integer nif;
-    private String password;
+    private Integer password;
     private String name;
-    private Date birthday;
+    private LocalDate birthday;
     private Integer telephone;
     private Integer cellphone;
     private String email;
@@ -15,13 +18,13 @@ public class Client {
     public Client(){
 
     }
-    public Client(Integer nif, String password, String name, Date birthday, Integer telephone, Integer cellphone, String email, String profession){
+    public Client(Integer nif, Integer password, String name, LocalDate birthday, Integer telephone, Integer cellphone, String email, String profession){
         this.nif = nif;
         this.password = password;
         this.name = name;
         this.birthday = birthday;
         this.telephone = telephone;
-        this.cellphone =cellphone;
+        this.cellphone = cellphone;
         this.email = email;
         this.profession = profession;
     }
@@ -30,11 +33,11 @@ public class Client {
         return nif;
     }
 
-    public String getPassword() {
+    public Integer getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
+    public void setPassword(Integer password) {
         this.password = password;
     }
 
@@ -46,10 +49,9 @@ public class Client {
         this.name = name;
     }
 
-    public Date getBirthday() {
+    public LocalDate getBirthday() {
         return birthday;
     }
-
 
     public Integer getTelephone() {
         return telephone;
@@ -81,5 +83,19 @@ public class Client {
 
     public void setProfession(String profession) {
         this.profession = profession;
+    }
+
+    @Override
+    public String toString() {
+        return "Client{" +
+                "nif=" + nif +
+                ", password='" + password + '\'' +
+                ", name='" + name + '\'' +
+                ", birthday=" + birthday +
+                ", telephone=" + telephone +
+                ", cellphone=" + cellphone +
+                ", email='" + email + '\'' +
+                ", profession='" + profession + '\'' +
+                '}';
     }
 }
