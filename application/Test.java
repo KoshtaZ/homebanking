@@ -1,7 +1,6 @@
 package application;
 
 import model.Account;
-import model.BussinessAccount;
 import model.Client;
 
 import java.text.ParseException;
