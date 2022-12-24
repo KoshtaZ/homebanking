@@ -1,8 +1,8 @@
-package model;
+package src.model;
 
 import java.time.LocalDate;
 
-public class CreditCard {
+public class DebitCard {
     private Long cardNumber;
     private int pin;
     private LocalDate validation;
@@ -10,11 +10,11 @@ public class CreditCard {
 
     private Client client;
 
-    public CreditCard(){
+    public DebitCard(){
 
     }
 
-    public CreditCard(Long cardNumber, int pin, LocalDate validation, int code, Client client) {
+    public DebitCard(Long cardNumber, int pin, LocalDate validation, int code, Client client) {
         this.cardNumber = cardNumber;
         this.pin = pin;
         this.validation = validation;

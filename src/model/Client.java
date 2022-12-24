@@ -1,24 +1,26 @@
-package model;
+package src.model;
 
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.util.Date;
 
 public class Client {
 
+
+
+    private Long id;
     private Integer nif;
     private Integer password;
     private String name;
     private LocalDate birthday;
     private Integer telephone;
-    private Integer cellphone;
+    private Long cellphone;
     private String email;
     private String profession;
 
     public Client(){
 
     }
-    public Client(Integer nif, Integer password, String name, LocalDate birthday, Integer telephone, Integer cellphone, String email, String profession){
+    public Client(Long id, Integer nif, Integer password, String name, LocalDate birthday, Integer telephone, Long cellphone, String email, String profession){
+       this.id = id;
         this.nif = nif;
         this.password = password;
         this.name = name;
@@ -29,8 +31,20 @@ public class Client {
         this.profession = profession;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public Integer getNif() {
         return nif;
+    }
+
+    public void setNif(Integer nif) {
+        this.nif = nif;
     }
 
     public Integer getPassword() {
@@ -53,6 +67,10 @@ public class Client {
         return birthday;
     }
 
+    public void setBirthday(LocalDate birthday) {
+        this.birthday = birthday;
+    }
+
     public Integer getTelephone() {
         return telephone;
     }
@@ -61,11 +79,11 @@ public class Client {
         this.telephone = telephone;
     }
 
-    public Integer getCellphone() {
+    public Long getCellphone() {
         return cellphone;
     }
 
-    public void setCellphone(Integer cellphone) {
+    public void setCellphone(Long cellphone) {
         this.cellphone = cellphone;
     }
 
@@ -88,8 +106,9 @@ public class Client {
     @Override
     public String toString() {
         return "Client{" +
-                "nif=" + nif +
-                ", password='" + password + '\'' +
+                "id=" + id +
+                ", nif=" + nif +
+                ", password=" + password +
                 ", name='" + name + '\'' +
                 ", birthday=" + birthday +
                 ", telephone=" + telephone +

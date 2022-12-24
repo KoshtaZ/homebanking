@@ -1,7 +1,7 @@
-package application;
+package src.application.console;
 
-import model.Account;
-import model.Client;
+import src.model.Account;
+import src.model.Client;
 
 import java.text.ParseException;
 
@@ -39,7 +39,7 @@ public class Test {
         System.out.println(client);
 
          */
-        Client client = new Client(1111, 1231, "Alex", LocalDate.of(1996,02, 26), 923511073, 912912685, "koshtaz@gmail.com", "student");
+        Client client = new Client(11L, 1111, 1231, "Alex", LocalDate.of(1996,02, 26), 923511073, 912912685L, "koshtaz@gmail.com", "student");
         System.out.println(client);
 
         //Client client2 = new Client(1111, 1231, "Jose", LocalDate.of(1997, 03, 11), 923511073, 912912685, "koshtaz@gmail.com", "student");
@@ -48,10 +48,10 @@ public class Test {
         //List<Client> secondary = new ArrayList<Client>();
         //secondary.add(client2);
 
-        Client secondaryClient = new Client(1111, 1231, "Jose", LocalDate.of(1997, 03, 11), 923511073, 912912685, "koshtaz@gmail.com", "student");
+        Client secondaryClient = new Client(2L, 1111, 1231, "Jose", LocalDate.of(1997, 03, 11), 923511073, 912912685L, "koshtaz@gmail.com", "student");
         System.out.println(secondaryClient);
 
-        Client secondaryClient2 = new Client(1111, 1231, "Hinata", LocalDate.of(1997, 03, 11), 923511073, 912912685, "koshtaz@gmail.com", "student");
+        Client secondaryClient2 = new Client(3L, 1111, 1231, "Hinata", LocalDate.of(1997, 03, 11), 923511073, 912912685L, "koshtaz@gmail.com", "student");
         System.out.println(secondaryClient2);
 
         Account account = new Account(1212L, 99999, client, Arrays.asList(secondaryClient, secondaryClient2), 1000D );
